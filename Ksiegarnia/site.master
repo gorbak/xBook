@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="Ksiegarnia.site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="Stylesheet" type="text/css" media="all" href="styl/styl.css" />
+    <title>xBOOK - Internetowa księgarnia dla każdego</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div id=content>  
+
+    <div id="top">
+        <a id="logo" href="/" alt="xBOOK - Tanie książki"></a>
+        <nav id=menu>
+            <ul >
+                <li class="spacing"><a href="/">Strona główna</a></li>
+                <li class="spacing relative kategorieMenuHover"><a href="#">Kategorie</a><span class="arrow-down"></span>
+                    <!--- Kategorie --->
+                    <ul class="kategorieMenu">
+                        <asp:DataList ID="DataList1" runat="server" DataKeyField="id_kategoria" 
+                                 DataSourceID="SqlDataSource1" Width="100%">
+                                 <ItemTemplate>
+                                 <li class="kategoriaMenuItem"><a style="display:block;" href="/kategoria/<%# Eval("id_kategoria") %>" /><asp:Label ID="nazwaLabel" runat="server" Text='<%# Eval("nazwa") %>' /></a></li>
+                                 </ItemTemplate>
+                             </asp:DataList>
+                           
+                  
+                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                 ConnectionString="<%$ ConnectionStrings:CS %>" 
+                                 SelectCommand="SELECT * FROM [Kategorie]"></asp:SqlDataSource>
+
+                    </ul>
+
+                </li>
+                <li class="spacing"><a href="/kontakt/">Kontakt</a></li>
+            </ul>
+        </nav>   <form action=/szukaj method=get>            
+                <div class="wyszukiwaniePasek" >
+                
+                     <input name=q maxlength="200" type=text /><a href="#" class="wyszukiwanieKategorie" >Wszystkie</a>
+                     <input type="submit" value="">
+                
+                </div>
+                </form>
+                <!--- menu logowania --->
+
+        <div id=loginMenu>
+
+            <div runat=server id="linkiUserLogged">
+                <ul>
+                   <li class="separator">Witaj, <label runat=server id=loginUsera></label> (<a class='blueText' href="/wyloguj/">Wyloguj</a>)</li>
+                   <li class="separator"><a href="/konto/"><span class="imgkonto">Twoje konto</span></a></li>
+                            <li runat=server id="linkiAdminLogged" class="separator"><a href="/admin/"><span class="imgkonto">Administracja</span></a></li>
+                            <li runat=server id="linkiPracownikLogged" class="separator"><a href="/admin/"><span class="imgkonto">Pracownicy</span></a></li>
+                   <li class="separator"><a href="/koszyk/"><span class="imgkoszyk">Koszyk</span></a></li>
+                </ul>
+            </div>            
+            <div runat=server id="linkiLoggedOut">
+                <ul>
+                   <li class="separator">Witaj, <a class='blueText' href="/logowanie/">zaloguj się</a></li>
+                   <li class="separator"><a href="/rejestracja/"><span class="imgkonto">Rejestracja</span></a></li>
+                   <li class="separator"><a href="/koszyk/"><span class="imgkoszyk">Koszyk</span></a></li>
+                </ul>
+            </div>
+
+        </div>
+                
+    </div><div class="clear"></div>
+            <form id="form1" style='margin:0' runat="server">
+                <div style='margin:0'>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+           </form>
+</div>
+</body>
+</html>

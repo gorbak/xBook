@@ -1,0 +1,9 @@
+C:\Users\Gorbak\Desktop\KS\Ksiegarnia\Ksiegarnia\bin\Ksiegarnia.dll
+C:\Users\Gorbak\Desktop\KS\Ksiegarnia\Ksiegarnia\bin\Ksiegarnia.pdb
+C:\Users\Gorbak\Desktop\KS\Ksiegarnia\Ksiegarnia\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Gorbak\Desktop\KS\Ksiegarnia\Ksiegarnia\obj\Debug\Ksiegarnia.dll
+C:\Users\Gorbak\Desktop\KS\Ksiegarnia\Ksiegarnia\obj\Debug\Ksiegarnia.pdb
+E:\Users\Gorbak\Desktop\KS\Ksiegarnia\Ksiegarnia\bin\Ksiegarnia.dll
+E:\Users\Gorbak\Desktop\KS\Ksiegarnia\Ksiegarnia\bin\Ksiegarnia.pdb
+E:\Users\Gorbak\Desktop\KS\Ksiegarnia\Ksiegarnia\obj\Debug\Ksiegarnia.dll
+E:\Users\Gorbak\Desktop\KS\Ksiegarnia\Ksiegarnia\obj\Debug\Ksiegarnia.pdb

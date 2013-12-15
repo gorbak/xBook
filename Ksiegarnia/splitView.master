@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeBehind="splitView.master.cs" Inherits="Ksiegarnia.splitView" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="SplitViewHeader"><asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder></div>
+    <div id="leftPanelSplitView">
+    <ul>
+        <li><a href="1"><div runat='server' id="menuAdm1" class='label_menu_admin'>Ksiązki</div></a></li>
+        <li><a href="2"><div runat='server' id="menuAdm2" class='label_menu_admin'>Kategorie</div></a></li>
+        <li><a href="3"><div runat='server' id="menuAdm3" class='label_menu_admin'>Zamówienia</div></a></li>
+        <li><a href="4"><div runat='server' id="menuAdm4" class='label_menu_admin'>Stan magazynu</div></a></li>
+        <li><a href="5"><div runat='server' id="menuAdm5" class='label_menu_admin'>Użytkownicy</div></a></li>
+        <li><a href="6"><div runat='server' id="menuAdm6" class='label_menu_admin'>Autorzy</div></a></li>
+        
+    </ul>
+    
+    </div>
+    <div id="rightPanelSplitView">
+        <asp:ContentPlaceHolder 
+        ID="ContentPlaceHolder3" runat="server">
+    </asp:ContentPlaceHolder>
+    </div>
+
+
+&nbsp;
+    
+</asp:Content>
